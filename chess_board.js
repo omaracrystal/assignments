@@ -1,13 +1,15 @@
-//var userInput = prompt("How wide do you want your chessboard to be?")
+var userInput = prompt("How wide do you want your chessboard to be?")
 
 var string1 = " #"
 var string2 = "# "
 var newline = "\n"
-var counter = .5;
+var counter = 0.5
 
-var chessboard = string1 + newline + string2
+var chessboard = function () {
+  console.log(string1.repeat(userInput) + newline + string2.repeat(userInput));
+};
 
-while (counter <= 3.5) {
+while (counter <= userInput/2) {
   console.log(chessboard);
   counter++
- }
+};
